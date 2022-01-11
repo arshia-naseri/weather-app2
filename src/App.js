@@ -38,13 +38,13 @@ function App() {
   const [city, setCity] = useState('Toronto')
 
   const [isMetric, setIsMetric] = useState(true)
-  const [isDayTime, setIsDayTime] = useState(true)
+  // const [isDayTime, setIsDayTime] = useState(true)
 
   const [loadCurrentCondition,setLoadCurrentCondition] = useState(false)
   const [loadHourlyForcast,setLoadHourlyForcast] = useState(false)
   const [loadDailyForcast,setLoadDailyForcast] = useState(false)
 
-  let mdfHoulryForecast,mdfDailyForecast, mdfCurrentDetails, mdfCurrentCondtion
+  let mdfHoulryForecast,mdfDailyForecast, mdfCurrentDetails, mdfCurrentCondtion, isDayTime
 
   apiURLs.initURL(city)
 
@@ -53,7 +53,7 @@ function App() {
     getHourlyForcast()
     getDailyForcast()
 
-    setIsDayTime(weather.IsDayTime)
+    isDayTime = weather.IsDayTime 
   },[])
   
   useEffect(()=>{
@@ -64,7 +64,7 @@ function App() {
     getCurrentCondition()
     getHourlyForcast()
     getDailyForcast()
-    setIsDayTime(weather.IsDayTime)
+    isDayTime = weather.IsDayTime
   },[city])
 
   function getDailyForcast(){
