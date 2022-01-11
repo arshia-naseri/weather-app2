@@ -8,8 +8,8 @@ let dailyForcastURL
 function initURL(cityName){
     let cityID = (cityList.cityList.find((elm) => elm.cityName === cityName)).apiID
 
-    // let key = 'pGuO66eACAaohMRWg609GScW6WhSfrBS'
-    let key = 'AGGlEh0AJojABzAfRuCHS7obG6AB9arV'
+    let key = 'pGuO66eACAaohMRWg609GScW6WhSfrBS'
+//     let key = 'AGGlEh0AJojABzAfRuCHS7obG6AB9arV'
 
     currentConditionsURL = `https://dataservice.accuweather.com/currentconditions/v1/${cityID}?apikey=${key}&details=true`
     hourlyForcastURL = `https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${cityID}?apikey=${key}&metric=true`
