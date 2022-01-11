@@ -1,0 +1,25 @@
+@media (min-width:50em){
+    .hourlyForecastSection{
+        overflow-x: scroll;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hourlyForecastGroup{
+        gap: 3rem;
+    }
+
+    .hourlyForecastTileImage{
+        width: 4rem;
+        margin: 1rem 0;
+    }
+
+    .hourlyForecastTileTime{
+        font-size: 1em;
+    }
+
+    .hourlyForecastTileTemp{
+        font-size: 1em;
+    }
+}

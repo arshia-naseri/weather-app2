@@ -1,0 +1,42 @@
+.currentDetailsSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.currentDetailsSection section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.currentDetailsSection img{
+    width: 2.6rem;
+    
+}
+
+.currentDetailsSection img:not(.dayNightImage){
+    filter: var(--flt--day--icons);
+}
+
+.nightMode .currentDetailsSection img:not(.dayNightImage){
+    filter: var(--flt--night-icons);
+}
+
+.perceptionLabel,
+.humidLabel,
+.windSpeedLabel,
+.dayNightLabel{
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 0.7rem;
+}
+
+.perceptionValueDIV,
+.humidValueDIV,
+.windSpeedValueDIV,
+.dayNightValueDIV{
+    font-size: 0.7rem;
+    font-weight: bold;
+}

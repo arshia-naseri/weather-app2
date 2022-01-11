@@ -1,0 +1,49 @@
+.dailyForecastGroup--mobile .dailyForecastImage{
+    width: var(--size--weather--icon);
+}
+
+.dailyForecastGroup--mobile{
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr 0.4fr;
+    gap: 1em 0;
+    padding: 0.4rem;
+    padding-bottom: 2rem;
+}
+
+.dailyForecastGroup--mobile section{
+    font-weight: 300;
+}
+
+.dailyForecastGroup--mobile section:nth-child(1),
+.dailyForecastGroup--mobile section:nth-child(3),
+.dailyForecastGroup--mobile section:nth-child(4)
+{
+    font-weight: bold;
+}
+
+
+.dailyForecastGroup--mobile .dailyForecastImageSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dailyForecastGroup--mobile .dailyForecastDaySection{
+    display: flex;
+    align-items: center;
+}
+
+.dailyForecastGroup--mobile .dailyForecastLowDigitSection,
+.dailyForecastGroup--mobile .dailyForecastHighDigitSection{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dailyForecastHighDigitSection{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dailyForecastGroup--desktop{
+    display: none;
+}

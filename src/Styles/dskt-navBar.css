@@ -1,0 +1,120 @@
+@media (min-width: 50em){
+    .navBarSection{
+        position: absolute;
+        top: 0.5em;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 300;
+    }
+
+    .navBarSection .citySection{
+        display: flex;
+        margin-left: 1em;
+    }
+
+    .navBarSection .citySection .cityTile{
+        width: 6em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .navBarSection .citySection .cityTile:hover{
+        cursor: pointer;
+    }
+
+    .navBarSection .citySection .cityTile::after{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 4px;
+        transform-origin: center;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--clr--day--navBar);
+        transition: all 0.1s ease-in;
+        margin-top: 0.5em;
+    }
+
+    .nightMode .citySection .cityTile::after{
+        background-color: var(--clr--night--navBar);
+    }
+
+    .navBarSection .citySection .cityTile:hover::after{
+        width: 100%;
+    }
+
+    .navBarSection .citySection .cityNavSelected::after{
+        width: 100%;
+    }
+
+    .navBarSection .citySection .cityTile .cityName{
+        font-size: 1.1em;
+    }
+
+
+    .navBarSection .userProperties{
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+        align-items: center;
+        margin-right: 0.5em;
+    }
+
+    .navBarSection .userProperties .aboutSection{
+        font-size: 2.5em;
+    }
+
+    .navBarSection .userProperties .aboutSection:hover{
+        cursor: help;
+        transform: scale(1.1);
+    }
+
+    .navBarSection .userProperties .metricSection{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border: solid 2px var(--clr--day--navBar);
+        width: 3em;
+        height: 3em;
+        border-radius: 6px;
+
+        user-select: none; /* supported by Chrome and Opera */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+    }
+
+    .navBarSection .userProperties .metricSection:hover{
+        cursor: pointer;
+    }
+
+    .navBarSection .userProperties .metricSection div{
+        font-size: 1.5em;
+    }
+
+    .navBarSection .userProperties .navBarMetricActivated{
+        background-color: var(--clr--day--navBar);
+    }
+
+    .navBarSection .userProperties .navBarMetricActivated div{
+        color: white;
+    }
+
+    .nightMode .userProperties .metricSection,
+    .nightMode .navBarMetricActivated
+    {
+        border-color: var(--clr--night--navBar);
+    }
+
+    .nightMode .userProperties .navBarMetricActivated{
+        background-color: var(--clr--night--navBar);
+    }
+}

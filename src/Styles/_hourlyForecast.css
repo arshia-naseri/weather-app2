@@ -1,0 +1,42 @@
+.hourlyForecastGroup{
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    overflow-y: scroll;
+    margin: 1rem;
+    scrollbar-width: none;
+}
+
+.hourlyForecastGroup::-webkit-scrollbar {
+    display: none;
+}
+
+.hourlyForecastTile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hourlyForecastTileTime{
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.hourlyForecastGroup section + section .hourlyForecastTileTime{
+    font-weight: 300;
+}
+
+
+.hourlyForecastTileImage{
+    width: var(--size--weather--icon);
+    margin: 0.2rem 0 1rem 0;
+}
+
+.hourlyForecastTileTemp{
+    font-weight: 300;
+}
+
+.hourlyForecastTileTemp{
+    font-size: .9rem;
+}

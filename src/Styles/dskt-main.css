@@ -1,0 +1,52 @@
+@import url('./dskt-currentCondition.css');
+@import url('./dskt-dailyForecast.css');
+@import url('./dskt-hourlyForecast.css');
+@import url('./dskt-navBar.css');
+
+@media (min-width: 50em){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .groupContainer{
+        width: max(50rem,80vw);
+        max-width: 70rem;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        grid-template-rows: repeat(8,1fr) ;
+        grid-template-areas: 
+            "tile1 tile3"
+            "tile1 tile3"
+            "tile1 tile3"
+            "tile1 tile3"
+            "tile1 tile4"
+            "tile2 tile4"
+            "tile2 tile4"
+            "tile2 tile4"
+        ;
+        gap: 1.5rem;
+        height: min(40rem,80vh);
+        max-height: 50rem;
+    }
+
+    .groupContainer section{
+        border-radius: 15px;
+    }
+
+    
+    .currentDetailsSection{
+        grid-area: tile2;
+    }
+
+    .hourlyForecastSection{
+        grid-area: tile3;
+    }
+    
+    .dailyForecastSection{
+        grid-area: tile4;
+    }
+    
+
+}

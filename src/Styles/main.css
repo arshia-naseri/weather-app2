@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('./_sideMenu.css');
+@import url('./_currentCondition.css');
+@import url('./_currentDetails.css');
+@import url('./_hourlyForecast.css');
+@import url('./_dailyForecast.css');
+
+/* Desktop */
+@import url('./dskt-main.css');
+
+
+:root{
+    --clr--body: rgba(249, 249, 249, 1);
+    --clr--light: rgba(255, 255, 255, 1);
+
+    --clr--phone--sideMenu--bars: var(--clr--light);
+    --clr--desktop--sideMenu--bars: var(--clr--night--gradient-dark);
+
+    --clr--day--gradient-dark: rgba(230, 60, 107, 1);
+    --clr--day--gradient-light: rgba(225, 187, 0, 1);
+
+    --clr--night--gradient-dark: rgba(13, 55, 119, 1);
+    --clr--night--gradient-light: rgba(124, 206, 241, 1);
+
+    --clr--night--sideMenu: rgba(124, 206, 241, 1);
+    --clr--day--sideMenu: rgba(225, 187, 0, 1);
+    
+    --clr--night--navBar: rgba(13, 55, 119, 1);
+    --clr--day--navBar: rgba(225, 187, 0, 1);
+
+    --flt--light: brightness(0) invert(1); 
+    --flt--day--icons: invert(67%) sepia(24%) saturate(1588%) hue-rotate(11deg) brightness(101%) contrast(102%);
+    --flt--night-icons: invert(9%) sepia(48%) saturate(7150%) hue-rotate(212deg) brightness(93%) contrast(90%);
+
+    --size--weather--icon: 2.5rem;
+
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--clr--body);
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.panels{
+    background-color: var(--clr--light);
+    border-radius: 5px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    border: 0.5px solid rgba(135, 135, 135, 0.2);
+    padding: 0.5rem;
+}
+
+
+
+@media (min-width:50em){
+    .panels{
+        width: 100%;
+        margin: 0;
+        border: 0.5px solid rgba(135, 135, 135, 0.2);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .btnSideBar{
+        display: none;
+    }
+    .sideMenuSection{
+        display: none;
+    }
+}
+
+/* Just in case screeen too small */
+
+@media (max-width:363px) {
+    .perceptionLabel,
+    .humidLabel,
+    .windSpeedLabel,
+    .dayNightLabel{
+        font-size: 0.6em;
+    }
+
+    .tempDigitDIV{
+        font-size: 3.3em;
+    }
+
+    .sideMenuSection{
+        transition: none;
+        font-size: 80%;
+    }
+}
+

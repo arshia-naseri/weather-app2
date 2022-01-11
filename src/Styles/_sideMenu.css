@@ -1,0 +1,168 @@
+.navBarSection{
+    display: none;
+}
+
+.btnSideBar{
+    width: 2rem;
+    height: 1.1rem;
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    background-image: url('../../public/icons/btnSideBarMenu.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 5;
+}
+
+
+.btnSideBarExit{
+    background-image: url('../../public/icons/btnExitSideBar.svg');
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.btnSideBarExit + .sideMenuSection{
+    left: 0;
+    transition: all 0.2s ease-in;
+}
+
+/* SideMenu */
+
+.sideMenuSection{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    left: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 0.2s ease-out;
+}
+
+.SideMenuGroup{
+    width: 90%;
+    height: 87%;
+    
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+
+    color: var(--clr--light);
+    font-weight: 300;
+}
+
+.sideMenuProperties{
+    width: 85%;
+}
+
+.sideMenuProperties .citySection{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+
+.sideMenuProperties .citySection .cityTileSection{
+    display: flex;
+    align-items: center;
+}
+
+/* before */
+.sideMenuProperties .citySection .citySelected{
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.sideMenuProperties .citySection .citySelected::before{
+    content: '';
+    position: absolute;
+    width: 0.8em;
+    height: 100%;
+    background-color: var(--clr--day--sideMenu);
+    top: 0;
+    left: 0;
+}
+
+.nightMode .sideMenuProperties .citySection .citySelected::before{
+    background-color: var(--clr--night--sideMenu);
+}
+
+/* end */
+
+
+.sideMenuProperties .citySection .cityTileSection .cityName{
+    font-size: 2.7em;
+    margin-left: 1.5rem;
+}
+
+.sideMenuProperties .metricSection{
+    margin-top: 1em;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sideMenuProperties .metricSection .btnToggle{
+    width: 3em;
+    height: 1.2em;
+    border-radius: 20px;
+    border: solid 4px var(--clr--day--sideMenu);
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all 0.1s ease-in;
+}
+
+.sideMenuProperties .metricSection .btnToggle div{
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+    position: absolute;
+    left: 5%;
+    border: solid 0.25em var(--clr--day--sideMenu);
+    transition: all 0.1s ease-in;
+}
+
+/* toggle activated */
+.sideMenuProperties .metricSection .toggleMetricActivated{
+    background-color: var(--clr--day--sideMenu);
+}
+
+.sideMenuProperties .metricSection .toggleMetricActivated div{
+    left: 95%;
+    transform: translateX(-100%);
+    border-color: white;
+}
+/* end */
+
+/* NightMode */
+
+.nightMode .sideMenuProperties .metricSection .btnToggle,
+.nightMode .sideMenuProperties .metricSection .btnToggle div{
+    border-color: var(--clr--night--sideMenu);
+}
+
+.nightMode .sideMenuProperties .metricSection .toggleMetricActivated{
+    background-color: var(--clr--night--sideMenu);
+}
+
+.nightMode .sideMenuProperties .metricSection .toggleMetricActivated div{
+    border-color: white;
+}
+
+.SideMenuGroup .copyRightSection{
+    display: flex;
+    justify-content: center;
+
+    font-size: 2em;
+}
+
+
+
