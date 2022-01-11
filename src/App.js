@@ -44,7 +44,8 @@ function App() {
   const [loadHourlyForcast,setLoadHourlyForcast] = useState(false)
   const [loadDailyForcast,setLoadDailyForcast] = useState(false)
 
-  let mdfHoulryForecast,mdfDailyForecast, mdfCurrentDetails, mdfCurrentCondtion, isDayTime
+  let mdfHoulryForecast,mdfDailyForecast, mdfCurrentDetails, mdfCurrentCondtion
+  let isDayTime = true
 
   apiURLs.initURL(city)
 
@@ -53,7 +54,7 @@ function App() {
     getHourlyForcast()
     getDailyForcast()
 
-    isDayTime = weather.IsDayTime 
+    
   },[])
   
   useEffect(()=>{
@@ -64,7 +65,6 @@ function App() {
     getCurrentCondition()
     getHourlyForcast()
     getDailyForcast()
-    isDayTime = weather.IsDayTime
   },[city])
 
   function getDailyForcast(){
@@ -221,7 +221,7 @@ function App() {
   modifiedCurrentCondition()
 
   const cityNames = cities.cityList.map(function(elm) {return elm.cityName})
-  
+  isDayTime = weather.IsDayTime 
   return (
     <>
 
